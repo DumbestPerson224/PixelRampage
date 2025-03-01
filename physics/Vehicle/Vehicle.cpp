@@ -35,11 +35,11 @@ void Vehicle::calculateBrakeForce(float velocity, float time) {
 }
 
 void Vehicle::calculateVelocity(float initialVelocity, float time) {
-	Vehicle::vehicleVelocity = initialVelocity + (Vehicle::vehicleAcceleration * time);
+	Vehicle::vehicleAcceleration = initialVelocity + (Vehicle::vehicleAcceleration * time);
 }
 
 void Vehicle::calculateAcceleration(float initialVelocity, float finalVelocity, float time){
-	Vehicle::vehicleAcceleration = (finalVelocity - initialVelocity / time);
+	Vehicle::vehicleAcceleration = (finalVelocity - initialVelocity) / time
 }
 
 void Vehicle::calculateDeceleration(float initialVelocity, float finalVelocity, float time){
