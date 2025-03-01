@@ -5,7 +5,7 @@ class WeaponPhysics{
           float weaponMass, weaponVelocity, weaponAcceleration, weaponMomentum, weaponForce;
     public:
            WeaponPhysics();
-           void calculateWeaponForce(float velocity, float time);
+           void calculateWeaponForce(float velocity, float acceleration);
            void calculateWeaponVelocity(float initialVelocity, float time);
            void calculateWeaponAcceleration(float initialVelocity, float finalVelocity, float time);
            void calculateWeaponMomentum(float mass, float velocity);

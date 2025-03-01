@@ -63,5 +63,4 @@ public:
 	void calculateVehicleCollision();
     void calculateVehicleMass(float mass);
 };
-
 #endif 
