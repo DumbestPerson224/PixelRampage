@@ -65,3 +65,11 @@ void VehicleEngine::Physics::calculateVehicleCollisionForce() {
 void VehicleEngine::Physics::calculateVehicleMass(float density, float volume) {
 	VehicleEngine::Physics::vehicleMass = density * volume;
 }
+
+void VehicleEngine::Physics::calculateFriction(float force, float mass, float acceleration, float rotation, float mu){
+	/*
+	Force = mass * acceleration + mu * rotation
+ 	Force = Force - mu = mass * acceleration
+  	Force = mass * acceleration + mu * rotation;
+	*/
+}
