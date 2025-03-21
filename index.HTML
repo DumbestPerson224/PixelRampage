@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PixelRampage</title>
+        <link rel="stylesheet" href="src/styles.css"/>
+        <script src="src/script.js">
+            let authenticated;
+            const headers = new Headers({
+                'Content-Type': 'application/text',
+                "session": "auth_complete",
+            });
+
+            const options = {
+                method: "POST",
+                headers: headers,
+            }
+            fetch("auth.php", options)
+            .then(response => {
+                if(response.status == 200){
+                    authenticated = response.headers.get("session");
+                    if(authenticated == true){
+                        
+                    }
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <noscript style="color:orange">This website won't work without <a href="https://www.bing.com/search?qs=LS&pq=How+to+enable+JavaScri&sk=CSYN1&sc=14-22&pglt=425&q=How+to+enable+javascript&cvid=d2d3101b2ee049568609d0ab7862c74c&gs_lcrp=EgRlZGdlKgYIABAAGEAyBggAEAAYQDIGCAEQRRg5MgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBAAGEDSAQg0NjM3ajBqMagCALACAA&FORM=ANNTA1&PC=U531">JavaScript</a></noscript>
+            <div class="navbar-version" id="navbar-version">
+                <div class="navbar-links-versions-content">
+                    <h2>Versions</h2>
+                    <p>See all the available versions</p>
+                    <ul>
+                        <a href="versions/version1.exe">Version 1</a>
+                    </ul>
+                </div>        
+            </div>
+            <div class="navbar-news" id="navbar-news">
+                <div class="navbar-news-content">
+                    <h2>News</h2>
+                    <p>Get recent updates</p>
+                    <ul>
+                        <a href="news.html">News</a>
+                    </ul> 
+                </div>
+            </div>
+            <div class="navbar-about" id="navbar-about">
+                <div class="navbar-about-content">
+                    <h2>About</h2>
+                    <p>About us</p>
+                    <ul>
+                        <a href="about.html">About</a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar-top">
+            <div class="navbar-home">
+                 <a href="javscript:this.style.display = 'none';">Home</a>
+            </div>
+            <div class="navbar-github">
+                <a href="https://github.com/DumbestPerson224">GitHub</a>
+            </div>
+            <div class="navbar-language">
+                <a onclick="dropDown();" id="dropdown">Select your language</a>
+                <div class="language-dropdown" id="language-dropdown">
+                    <select onchange="this.style.display=dropDown()">
+                        <option>English (Default)</option>
+                        <option>Japanese</option>
+                        <option>French</option>
+                        <option>Chinese</option>
+                    </select>
+                </div>
+            </div>
+            <div class="navbar-top-about">
+                <a onclick="showAbout()" id="aboutButton">About</a>
+            </div>
+            <div class="navbar-top-version">
+                <a onclick="showVersion();" id="versionButton">Version</a>
+            </div>
+            <div class="navbar-top-news">
+                <a href="javascript:showNews();" id="newsButton">News</a>
+            </div>
+            <div class="navbar-top-background-link">
+                <a href="javascript:showBackground();" id="background-link">Select a background</a>
+            </div>
+            <div class="navbar-top-background" id="background">
+                <select id="background-option" onchange="selectBackground();">
+                    <option value="black"> -- No option selected --</option>
+                    <option value="black">Black</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="red">Red</option>
+                    <option value="violet">Violet</option>
+                    <option value="pink">Pink</option>
+                    <option value="blue">Blue</option>
+                </select>
+                <button onclick="save();">Save</button>
+            </div>
+        </nav>
+        <div class="reading-section" id="reading-section">
+            <div class="reading-section-content" id="reading-section">
+                <h1>PixelRampage Features</h1>
+                <div class="reading-section-UI" id="reading-section">
+                    <h2>UI</h2>
+                    <h3> The game engine's UI is easy to navigate. It's colorful, well positioned etc</h3>
+                    <a href="#download-app">Download with UI</a>
+                </div>
+                <div class="reading-section-physics" id="reading-section">
+                    <h2>Physics</h2>
+                    <h3>The game engine supports vehicle physics, weapon physics</h3>
+                    <a href="#download">Download now</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <h1>Bottom of page</h1>
+            <a href="#top">Go to top</a>
+        </div>
+    </body>
+</html>
