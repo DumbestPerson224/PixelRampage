@@ -10,6 +10,7 @@ _checkStack:
 
 return:
 	pop ebp 
+	mov eax, 1
 	ret 
 	
 error:
